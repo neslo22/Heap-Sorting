@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9A2F3579-409E-421A-AE08-D401E412FEDC}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>Heap_Sorting</RootNamespace>
     <AssemblyName>Heap Sorting</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>

@@ -8,82 +8,66 @@ namespace Heap_Sorting
 {
     class HeapSort
     {
-        public int heapSize;
-        public int[,] output1;
-        public int[,] output2;
+        private int stepCounter = 0;
+        private bool done = false;
+        public int[,] history;
 
-        private void BuildHeap(int[] arr)
-        {            
-            heapSize = arr.Length - 1;
-            output1 = new int[(heapSize / 2 + 1), heapSize + 1];
-            Console.WriteLine("Building heap sort");
-            for (int i = heapSize / 2; i >= 0; i--)
+        public void sort(int[] arr)
+        {
+            int n = arr.Length;
+
+            for (int i = n / 2 - 1; i >= 0; i--)
+                heapify(arr, n, i);
+
+            for (int i = n-1; i >= 0; i--)
             {
-                //Array.Copy(arr, output1[], heapSize+1);
-                for (int j=0; j <= heapSize; j++)
+                int temp = arr[0];
+                arr[0] = arr[i];
+                arr[i] = temp;
+                heapify(arr, i, 0);
+                if(i == 0 && done)
                 {
-                    output1[i,j] = arr[j];
+                    for (int j = 0; j < arr.Length; j++)
+                        history[stepCounter, j] = arr[j];
                 }
-                //output1[i] = ; // output
-                DisplayArray(arr);
-                Heapify(arr, i);
-                Console.WriteLine();
-            }
+            }            
         }
-        private void Swap(int[] arr, int x, int y) //function to swap elements
+        void heapify(int[] arr, int n, int i)
         {
-            int temp = arr[x];
-            arr[x] = arr[y];
-            arr[y] = temp;
-        }
-        private void Heapify(int[] arr, int index)
-        {
-            int left = 2 * index;
-            int right = 2 * index + 1;
-            int largest = index;
+            int largest = i, left = 2*i+1, right = 2*i+2;
 
-            if (left <= heapSize && arr[left] > arr[index])
-            {
+            if (left < n && arr[left] > arr[largest])
                 largest = left;
-            }
-
-            if (right <= heapSize && arr[right] > arr[largest])
-            {
+            if (right < n && arr[right] > arr[largest])
                 largest = right;
-            }
-
-            if (largest != index)
+            if (largest != i)
             {
-                Swap(arr, index, largest);
-                Heapify(arr, largest);
-            }
-        }
-        public void PerformHeapSort(int[] arr)
-        {
-            BuildHeap(arr); 
-            output2 = new int[arr.Length + 1, heapSize + 1];
-            Console.WriteLine();
-            Console.WriteLine("Performing the heap sort");
-            for (int i = arr.Length - 1; i >= 0; i--)
-            {
-                for (int j = 0; j <= heapSize; j++)
+                int swap = arr[i];
+                arr[i] = arr[largest];
+                arr[largest] = swap;
+                if (done)
                 {
-                    output2[i + 1, j] = arr[j];
+                    for (int x = 0; x < arr.Length; x++)
+                        history[stepCounter, x] = arr[x];
                 }
-                DisplayArray(arr);
-                Swap(arr, 0, i);
-                heapSize--;
-                Heapify(arr, 0);
-                Console.WriteLine();
+                stepCounter++;
+
+                heapify(arr, n, largest);
             }
-            Console.WriteLine();
-            Console.WriteLine("Displaying the array");
-            DisplayArray(arr);
+            
+            
         }
-        private void DisplayArray(int[] arr)
+        public int[,] getHeap(int[] arr)
         {
+            int[] temp = new int [arr.Length];
             for (int i = 0; i < arr.Length; i++)
-            { Console.Write("{0} ", arr[i]); }
-        }        
+                temp[i] = arr[i];
+            sort(arr);
+            history = new int[stepCounter + 1, arr.Length];
+            done = true;
+            stepCounter = 0;
+            sort(temp);
+            return history;
+        }
     }
 }

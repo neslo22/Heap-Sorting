@@ -5,18 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Heap_Sorting"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="700" Width="1250" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="35"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="textInput" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="632"/>
-        <Button x:Name="buttonRun" Content="Confirm" HorizontalAlignment="Left" Margin="647,10,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="buttonRun_Click"/>
-        <Button x:Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Margin="807,10,0,0" VerticalAlignment="Top" Width="75" Height="20"/>
-        <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" Margin="727,10,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="buttonNext_Click"/>
+        <TextBox x:Name="textInput" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="894"/>
+        <Button x:Name="buttonRun" Content="Confirm" HorizontalAlignment="Left" Margin="909,10,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="buttonRun_Click"/>
+        <Button x:Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Margin="1149,10,0,0" VerticalAlignment="Top" Width="75" Height="20" IsEnabled="False"/>
+        <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" Margin="1069,10,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="buttonNext_Click" IsEnabled="False"/>
+        <Button x:Name="buttonPrevious" Content="Previous" HorizontalAlignment="Left" Margin="989,10,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Canvas x:Name="canvasTree" Margin="10,1,250,10" Grid.Row="1"/>
+        <DataGrid Margin="989,0,0,10" Grid.Row="1"/>
 
-        <Canvas x:Name="canvasTree" Margin="10" Grid.Row="1"/>
-        
+
     </Grid>
 </Window>
