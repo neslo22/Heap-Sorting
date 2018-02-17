@@ -1,0 +1,30 @@
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\bin\Debug\Heap Sorting.exe.config
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\bin\Debug\Heap Sorting.exe
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\bin\Debug\Heap Sorting.pdb
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\MainWindow.g.cs
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\App.g.cs
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting_MarkupCompile.cache
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting_MarkupCompile.lref
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\MainWindow.baml
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.g.resources
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap_Sorting.Properties.Resources.resources
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.csproj.GenerateResource.Cache
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.exe
+D:\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.pdb
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\bin\Debug\Heap Sorting.exe.config
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\bin\Debug\Heap Sorting.exe
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\bin\Debug\Heap Sorting.pdb
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.csprojResolveAssemblyReference.cache
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\MainWindow.g.cs
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\App.g.cs
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting_MarkupCompile.cache
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting_MarkupCompile.lref
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\MainWindow.baml
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.g.resources
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap_Sorting.Properties.Resources.resources
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.csproj.GenerateResource.Cache
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.csproj.CoreCompileInputs.cache
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.exe
+D:\Libraries\Documents\GitHub\6DEALGO---Heap-Sorting-Demo\Heap Sorting\obj\Debug\Heap Sorting.pdb
