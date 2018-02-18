@@ -30,7 +30,7 @@ namespace Heap_Sorting
                     for (int j = 0; j < arr.Length; j++)
                         history[stepCounter, j] = arr[j];
                 }
-            }            
+            }
         }
         void heapify(int[] arr, int n, int i)
         {
@@ -54,8 +54,6 @@ namespace Heap_Sorting
 
                 heapify(arr, n, largest);
             }
-            
-            
         }
         public int[,] getHeap(int[] arr)
         {
