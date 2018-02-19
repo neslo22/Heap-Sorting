@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace Heap_Sorting
     {
         private HeapSort hs = new HeapSort();
         private int[,] history;
+        private int currentView = 0, inputSize = 5;
 
         public MainWindow()
         {
@@ -29,14 +31,37 @@ namespace Heap_Sorting
         }
         private void buttonRun_Click(object sender, RoutedEventArgs e)
         {
-            buildTree(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, });
+            buildTree(new int[] { 4, 10, 3, 5, 1 });
             history = hs.getHeap(new int[] { 4, 10, 3, 5, 1 });
+
+            fillDataGrid();
+
             buttonRun.IsEnabled = false;
             buttonNext.IsEnabled = true;
             buttonClear.IsEnabled = true;
         }
+        private void fillDataGrid()
+        {
+            DataGridTextColumn[] textColumn = new DataGridTextColumn[history.GetLength(0)];
+
+            for(int i = 0; i < history.GetLength(0); i++)
+            {
+                textColumn[i] = new DataGridTextColumn();
+                textColumn[i].Header ="";
+                textColumn[i].Binding = new Binding(Convert.ToString(i));
+                textColumn[i].MinWidth = 100;
+                datagridHistory.Columns.Add(textColumn[i]);
+                for (int j = 0; j < history.GetLength(1); j++)
+                {
+                    datagridHistory.Items.Add(new Item() { });
+                }
+            }
+
+            
+        }
         private void buildTree(int[] input)
         {
+            canvasTree.Children.Clear();
             int n = input.Length, height = 10, leavesPerLevel = 1, parent = 0, leftMostTemp = 0;
             Line[] connectLeaf = new Line[n - 1];
             Ellipse[] leaf = new Ellipse[n];
@@ -112,8 +137,68 @@ leftMostTemp = leavesPerLevel - 1;
             canvasTree.Children.Add(connect);
         }
         private void buttonNext_Click(object sender, RoutedEventArgs e)
+        {            
+            currentView++;
+            buildTree(getHistory());
+            if (currentView == history.GetLength(0) - 1)
+                buttonNext.IsEnabled = false;
+            if (currentView > 0)
+                buttonPrevious.IsEnabled = true;
+            else
+                buttonPrevious.IsEnabled = false;
+        }
+
+        private void buttonPrevious_Click(object sender, RoutedEventArgs e)
         {
-            
+            currentView--;
+            buildTree(getHistory());
+            if(currentView > 0)
+                buttonPrevious.IsEnabled = true;
+            else
+                buttonPrevious.IsEnabled = false;
+            if (currentView < history.GetLength(0))
+                buttonNext.IsEnabled = true;
+        }
+
+        private int[] getHistory()
+        {
+            int[] temp = new int[inputSize];
+            for(int i = 0; i < inputSize; i++)
+            {
+                temp[i] = history[currentView,i];
+            }
+            return temp;
         }
     }
 }
+/*public class Item
+        {
+            public int Num { get; set; }
+            public string Start { get; set; }
+            public string Finich { get; set; }
+        }
+
+        private void generate_columns()
+        {
+            DataGridTextColumn c1 = new DataGridTextColumn();
+            c1.Header = "Num";
+            c1.Binding = new Binding("Num");
+            c1.Width = 110;
+            dataGrid1.Columns.Add(c1);
+            DataGridTextColumn c2 = new DataGridTextColumn();
+            c2.Header = "Start";
+            c2.Width = 110;
+            c2.Binding = new Binding("Start");
+            dataGrid1.Columns.Add(c2);
+            DataGridTextColumn c3 = new DataGridTextColumn();
+            c3.Header = "Finich";
+            c3.Width = 110;
+            c3.Binding = new Binding("Finich");
+            dataGrid1.Columns.Add(c3);
+
+            dataGrid1.Items.Add(new Item() { Num = 1, Start = "2012, 8, 15", Finich = "2012, 9, 15" });
+            dataGrid1.Items.Add(new Item() { Num = 2, Start = "2012, 12, 15", Finich = "2013, 2, 1" });
+            dataGrid1.Items.Add(new Item() { Num = 3, Start = "2012, 8, 1", Finich = "2012, 11, 15" });
+
+        }
+*/
